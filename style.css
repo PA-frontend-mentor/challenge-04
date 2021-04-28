@@ -21,11 +21,13 @@ body {
           align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(to bottom, #af67e9, #6565e7);
+  overflow: hidden;
 }
 
 body main {
   width: 70%;
-  max-width: 1200px;
+  max-width: 1000px;
+  min-width: 864px;
   height: 550px;
   background-color: white;
   border-radius: 1rem;
@@ -38,6 +40,37 @@ body main .left-part {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body main .left-part .img-wrapper {
+  overflow: hidden;
+}
+
+body main .left-part .img-wrapper #top-box {
+  position: relative;
+  top: -289px;
+  left: -570px;
+}
+
+body main .left-part .img-wrapper #woman-img {
+  position: relative;
+  top: -870px;
+  left: -80px;
+}
+
+body main .left-part #email-box {
+  position: relative;
+  top: -1100px;
+  left: -130px;
+}
+
+body main .left-part #email-box-mobile {
+  display: none;
 }
 
 body main .right-part {
@@ -57,6 +90,7 @@ body main .right-part {
 }
 
 body main .right-part h1 {
+  font-size: 32px;
   margin: 70px 0 50px 0;
   font-weight: 700;
 }
@@ -68,7 +102,7 @@ body main .right-part .faq-wrapper {
 }
 
 body main .right-part .faq-wrapper .faq {
-  width: 70%;
+  width: 80%;
   max-width: 400px;
   min-height: 60px;
   padding: 15px 15px 15px 0;
@@ -83,6 +117,10 @@ body main .right-part .faq-wrapper .faq {
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: 1px #e7e7e9 solid;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body main .right-part .faq-wrapper .faq .first-line {
@@ -122,5 +160,97 @@ body main .right-part .faq-wrapper .faq .answer {
 .reverse {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 1040px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 600px;
+    min-width: 326px;
+    min-width: 396px;
+  }
+  body main .left-part {
+    height: 50%;
+    width: 100%;
+  }
+  body main .left-part .img-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: visible;
+  }
+  body main .left-part .img-wrapper #top-box {
+    -webkit-transform: scale(0.26);
+            transform: scale(0.26);
+    position: relative;
+    top: -499px;
+  }
+  body main .left-part .img-wrapper #woman-img {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    position: relative;
+    top: -1147px;
+    left: 0;
+  }
+  body main .left-part .img-wrapper #email-box-mobile {
+    display: block;
+    -webkit-transform: scale(0.45);
+            transform: scale(0.45);
+    position: relative;
+    top: -1397px;
+    left: -80px;
+  }
+  body main .left-part #email-box {
+    display: none;
+  }
+  body main .right-part {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    top: -260px;
+  }
+  body main .right-part h1 {
+    font-size: 24px;
+  }
+  body main .right-part .faq-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .right-part .faq-wrapper .faq {
+    max-width: 500px;
+  }
+  body main .right-part .faq-wrapper .faq .first-line p {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
